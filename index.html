@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CredManager</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="logo">
-        <h1>CredPro</h1>
-    </div>
+
     <nav>
+        <div class="logo">
+            <h1>CredPro</h1>
+        </div>
         <ul>
             <li>Home</li>
             <li>About</li>
@@ -18,6 +21,48 @@
 
         </ul>
     </nav>
+    <div class="container">
+        <div class="passContainer">
+            <h2>Credential Manager</h2>
+            <!-- <hr> -->
+            <p>This is a software application or service designed to help individuals and organizations securely store,
+                organize, and manage their login credentials, such as usernames and passwords, for various online
+                accounts and services. </p>
+
+                <table>
+                    <tr>
+                      <th>Website</th>
+                      <th>UserName</th>
+                      <th>Password</th>
+                    </tr>
+                    <tr>
+                     <td>youtube</td>
+                     <td>Sumit Singh</td>
+                     <td>123456</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </table>
+
+            <form>
+                <label for="website">Website:</label>
+                
+                <input type="text" id="website" name="website" required>
+                <label for="usernames">Username:</label>
+
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Submit</button>
+                </form>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
