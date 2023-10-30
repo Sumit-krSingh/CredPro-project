@@ -38,21 +38,24 @@ nav ul li {
 
 .passContainer {
     border: 2px solid rgb(63, 63, 63);
-    width: 50vw;
-    height: 60vh;
+    width: 70vw;
+    height: 75 vh;
     margin-top: -102px;
     color: rgb(3, 3, 48);
 }
 
-.passContainer form {
+/* .passContainer form {
     display: flex;
     flex-direction: column;
     width: 200px;
 
 
+} */
+h1,h2,h3{
+    margin: 15px 5px;
 }
 
-.passContainer form button {
+.btn {
     margin: 20px 10px;
     width: 63px;
     padding: 5px 0;

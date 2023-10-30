@@ -23,42 +23,48 @@
     </nav>
     <div class="container">
         <div class="passContainer">
-            <h2>Credential Manager</h2>
+            <h1>Credential Manager</h1>
             <!-- <hr> -->
             <p>This is a software application or service designed to help individuals and organizations securely store,
                 organize, and manage their login credentials, such as usernames and passwords, for various online
                 accounts and services. </p>
+                <h2>Your Password</h2>
 
                 <table>
                     <tr>
                       <th>Website</th>
                       <th>UserName</th>
                       <th>Password</th>
+                      <th>Delete</th>
+
                     </tr>
                     <tr>
                      <td>youtube</td>
                      <td>Sumit Singh</td>
                      <td>123456</td>
                     </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
+                   
                   </table>
 
-            <form>
+                  <h3>Submit Password</h3>
+
+            <form action="/submit" method="post">
                 <label for="website">Website:</label>
                 
                 <input type="text" id="website" name="website" required>
+                <br><br>
                 <label for="usernames">Username:</label>
 
                 <input type="text" id="username" name="username" required>
+                <br><br>
+
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+                <br><br>
 
-                <button type="submit">Submit</button>
+
+                <button class="btn" type="submit">Submit</button>
                 </form>
         </div>
     </div>
