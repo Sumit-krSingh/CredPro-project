@@ -63,3 +63,9 @@ h1,h2,h3{
     border-radius: 5px;
     background-color: rgb(237, 87, 237);
 }
+
+table,th,td, tr{
+border: 1px solid black;
+border-collapse: collapse;
+padding: 3px 13px;
+}
