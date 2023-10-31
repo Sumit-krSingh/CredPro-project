@@ -1,17 +1,22 @@
 function copyCred(txt) {
-navigator.clipboard.writeText(txt).then(
-    ()=>{
-        alert("Text copied to clipboard: " + txt);
-    },
-    ()=>{
-        alert("Text copied to clipboard failed");
+    navigator.clipboard.writeText(txt).then(
+        () => {
+            document.getElementById("spam").style.display ="inline"
+            // alert("Text copied to clipboard: " + txt);
+            setTimeout(()=>{
+                document.getElementById("spam").style.display ="none"
 
-    },
-);
-  
+            },2000);
+        },
+        () => {
+            alert("Text copied to clipboard failed");
+
+        },
+    );
+
     // Provide user feedback (e.g., an alert)
-  }
-  
+}
+
 // logic for delete data
 const deleteCredentials = (website) => {
     let data = localStorage.getItem("credentials")
@@ -45,9 +50,10 @@ let showcredentials = () => {
         for (let index = 0; index < arr.length; index++) {
             const element = arr[index];
             str += `<tr>
-    <td>${element.website} <img onclick ="copyCred(${element.website})" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
-    <td>${element.username}<img onclick ="copyCred(${element.username})" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
-    <td>${element.password}<img onclick ="copyCred(${element.password})" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
+
+            <td>${element.website}<img onclick ="copyCred('${element.website}')" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
+    <td>${element.username}<img onclick ="copyCred('${element.username}')" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
+    <td>${element.password}<img onclick ="copyCred('${element.password}')" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
     <td><button class ="btnsm" onclick="deleteCredentials('${element.website}')">Delete</button></td>
 
 </tr>`

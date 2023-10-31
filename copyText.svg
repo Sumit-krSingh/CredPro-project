@@ -2,8 +2,9 @@
   width="24"
   height="24"
   xmlns="http://www.w3.org/2000/svg"
-  fill="#000000"
+  fill="#4e4e4e"
   viewBox="0 0 24 24"
   onclick="copyTextToClipboard('YourTextToCopy')">
   <path d="M14,2C13.4,2 13,2.4 13,3C13,3.6 13.4,4 14,4C14.6,4 15,3.6 15,3C15,2.4 14.6,2 14,2M10,2C9.4,2 9,2.4 9,3C9,3.6 9.4,4 10,4C10.6,4 11,3.6 11,3C11,2.4 10.6,2 10,2M18,4H16V6H2A2,2 0 0,0 0,8V18A2,2 0 0,0 2,20H18A2,2 0 0,0 20,18V8A2,2 0 0,0 18,6M2,8V18H18V8H2Z" />
 </svg>
+
