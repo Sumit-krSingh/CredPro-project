@@ -28,38 +28,48 @@
             <p>This is a software application or service designed to help individuals and organizations securely store,
                 organize, and manage their login credentials, such as usernames and passwords, for various online
                 accounts and services. </p>
-                <h2>Your Password <span id ="spam">(copied)</span></h2>
+            <div class="tableContainer">
 
-                <table class="tab1">
-                    <tr>
-                      <th>Website</th>
-                      <th>UserName</th>
-                      <th>Password</th>
-                      <th>Delete</th>
+                <div class="leftSide">
 
-                    </tr> 
-                  </table>
+                    <h2>Your Password <span id="spam">(copied)</span></h2>
 
-                  <h3>Submit Password</h3>
+                    <table class="tab1">
+                        <tr>
+                            <th>Website</th>
+                            <th>UserName</th>
+                            <th>Password</th>
+                            <th>Delete</th>
 
-            <form action="/submit" >
-                <label for="website">Website:</label>
-                
-                <input type="text" id="website" name="website" required>
-                <br><br>
-                <label for="usernames">Username:</label>
+                        </tr>
+                    </table>
+                </div>
 
-                <input type="text" id="username" name="username" required>
-                <br><br>
+                <div class="rightSide">
 
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <br><br>
+                    <h3>Submit Password</h3>
+
+                    <form action="/submit">
+                        <label for="website">Website:</label>
+
+                        <input type="text" id="website" name="website" required>
+                        <br><br>
+                        <label for="usernames">Username:</label>
+
+                        <input type="text" id="username" name="username" required>
+                        <br><br>
 
 
-                <button class="btn" type="submit">Submit</button>
-                </form>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <br><br>
+
+
+                        <button class="btn" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <!-- <script src="https://kit.fontawesome.com/b1e180ddb0.js" crossorigin="anonymous"></script> -->

@@ -1,12 +1,22 @@
+// logic for mask the password
+function maskPassword(pass){
+    let str = ""
+    for (let index = 0; index < pass.length; index++) {
+        str += "*"
+        
+    }
+    return str
+}
+// logic for copypaste from table
 function copyCred(txt) {
     navigator.clipboard.writeText(txt).then(
         () => {
-            document.getElementById("spam").style.display ="inline"
+            document.getElementById("spam").style.display = "inline"
             // alert("Text copied to clipboard: " + txt);
-            setTimeout(()=>{
-                document.getElementById("spam").style.display ="none"
+            setTimeout(() => {
+                document.getElementById("spam").style.display = "none"
 
-            },2000);
+            }, 2000);
         },
         () => {
             alert("Text copied to clipboard failed");
@@ -34,7 +44,7 @@ let showcredentials = () => {
     let tb = document.querySelector(".tab1")
     let data = localStorage.getItem("credentials")
 
-    if (data == null) {
+    if (data == null || JSON.parse(data).length == 0) {
         tb.innerHTML = "no data to be show"
     }
     else {
@@ -52,8 +62,10 @@ let showcredentials = () => {
             str += `<tr>
 
             <td>${element.website}<img onclick ="copyCred('${element.website}')" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
+            
     <td>${element.username}<img onclick ="copyCred('${element.username}')" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
-    <td>${element.password}<img onclick ="copyCred('${element.password}')" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
+
+    <td>${maskPassword(element.password)}<img onclick ="copyCred('${element.password}')" src ="copyText.svg" alt ="copy button" width ="15" height ="10"></td>
     <td><button class ="btnsm" onclick="deleteCredentials('${element.website}')">Delete</button></td>
 
 </tr>`
